@@ -26,12 +26,3 @@ coverage
 *.ntvs*
 *.njsproj
 *.sw?
-
-SerilogUI.Client/.env*
-
-SerilogUI/assets
-SerilogUI/bin
-SerilogUI/obj
-
-SerilogUI.Test/obj
-SerilogUI.Test/bin

@@ -6,4 +6,30 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="build_client" />
+  </Target>
+
+  <ItemGroup>
+    <None Remove="assets\index.css" />
+    <None Remove="assets\index.js" />
+    <None Remove="assets\index.js.map" />
+    <None Remove="build_client.bat" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="assets\index.css" />
+    <EmbeddedResource Include="assets\index.js" />
+    <EmbeddedResource Include="assets\index.js.map" />
+    <EmbeddedResource Include="Views\Index.html">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+  </ItemGroup>
+
 </Project>

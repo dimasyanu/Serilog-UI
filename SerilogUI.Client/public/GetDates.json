@@ -1,0 +1,10 @@
+{
+    "statusCode": 200,
+    "message": "Successfully retrieved",
+    "data": {
+        "items": [
+            "2022-09-09",
+            "2022-09-10"
+        ]
+    }
+}
