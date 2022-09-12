@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerilogUI", "SerilogUI\SerilogUI.csproj", "{DB8EE914-E775-4896-85D4-21FB0FCA892A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerilogUI", "SerilogUI\SerilogUI.csproj", "{DB8EE914-E775-4896-85D4-21FB0FCA892A}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "SerilogUI.Client", "SerilogUI.Client\SerilogUI.Client.njsproj", "{452694C6-3765-4CE5-AE2E-15C9D01DF10B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerilogUI.Test", "SerilogUI.Test\SerilogUI.Test.csproj", "{AF147439-AE53-442C-B5D3-B6C6394B4E0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{DB8EE914-E775-4896-85D4-21FB0FCA892A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB8EE914-E775-4896-85D4-21FB0FCA892A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB8EE914-E775-4896-85D4-21FB0FCA892A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{452694C6-3765-4CE5-AE2E-15C9D01DF10B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{452694C6-3765-4CE5-AE2E-15C9D01DF10B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{452694C6-3765-4CE5-AE2E-15C9D01DF10B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{452694C6-3765-4CE5-AE2E-15C9D01DF10B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF147439-AE53-442C-B5D3-B6C6394B4E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF147439-AE53-442C-B5D3-B6C6394B4E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF147439-AE53-442C-B5D3-B6C6394B4E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF147439-AE53-442C-B5D3-B6C6394B4E0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

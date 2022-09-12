@@ -1,0 +1,40 @@
+
+html,
+body {
+  height: 100%;
+}
+
+#app {
+  height: 100vh;
+}
+
+.accordion-button {
+  overflow: hidden;
+}
+
+.timestamp {
+  border-right: 1px solid #f1f1f1;
+}
+
+div.page-link {
+  cursor: pointer;
+}
+
+#log-list span.type-color {
+  border-left: 5px solid;
+  display: block;
+  height: 100%;
+  position: absolute;
+
+  &.level-error {
+    border-color: #dc3545;
+  }
+
+  &.level-warning {
+    border-color: #ffc107;
+  }
+
+  &.level-info {
+    border-color: #0dcaf0;
+  }
+}
