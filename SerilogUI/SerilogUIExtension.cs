@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,14 +30,19 @@ namespace SerilogUI
             return services;
         }
 
-        public static IEndpointRouteBuilder UseSerilogUIDashboard(this IEndpointRouteBuilder app, Action<SerilogUIConfig>? configFactory)
+        public static IApplicationBuilder UseSerilogUIDashboard(this IApplicationBuilder app, Action<SerilogUIConfig>? configFactory)
         {
             var config = new SerilogUIConfig();
             if (configFactory != null) {
                 configFactory.Invoke(config);
             }
 
-            app.MapControllerRoute("SerilogUI", "{controller=SerilogUI}/{action=Index}");
+            app.UseRouting();
+
+            app.UseEndpoints(endpoints => {
+                endpoints.MapControllerRoute("SerilogUI", "{controller=SerilogUI}/{action=Index}");
+                endpoints.MapControllers();
+            });
 
             return app;
         }
